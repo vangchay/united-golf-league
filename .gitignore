@@ -1,0 +1,8 @@
+.settings
+node_modules
+.classpath
+.project
+**/target/**
+.vscode
+.flattened-pom.xml
+/target/

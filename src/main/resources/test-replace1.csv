@@ -1,0 +1,8 @@
+//tags to use for replacement and tags have ##<tag>##
+// csv first column: is the type and the rest are the data
+//CodeReplaceItem,tag,value
+//BaseServiceElement,tag,repeat tag...
+//CodeConvertObj,y,y offset,start text,ignore text,base64 encoded true/false of replace text,replace text, repeat...
+
+
+
