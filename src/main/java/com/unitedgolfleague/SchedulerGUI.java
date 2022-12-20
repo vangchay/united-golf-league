@@ -234,7 +234,7 @@ public class SchedulerGUI {
 		frmSchedulerGuiV.setBounds(x, y, dx, dy);
 		frmSchedulerGuiV.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmSchedulerGuiV.getContentPane().setLayout(new MigLayout("", "[167px][287px,grow]",
-				"[22px][18px][22px][22px][22px][22px][22px][6px][31px][13px][31px,grow]"));
+		        "[22px][18px][22px][22px][22px][22px][22px][6px][31px][13px][31px,grow]"));
 		// **CUSTOM***
 		frmSchedulerGuiV.addWindowListener(new WindowAdapter() {
 			@Override

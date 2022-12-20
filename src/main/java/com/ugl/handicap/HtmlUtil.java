@@ -36,8 +36,8 @@ public class HtmlUtil {
 	private static List<String> output = null;
 
 	private final static String header[] = { "    <head>", "    <style>", "        table, td, tr {",
-			"            border: 1px solid black;", "            padding: 1px", "        }", "    </style>",
-			"    </head>" };
+	        "            border: 1px solid black;", "            padding: 1px", "        }", "    </style>",
+	        "    </head>" };
 
 	static public void startHTML(List<String> out) {
 		output = out;

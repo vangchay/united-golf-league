@@ -182,38 +182,38 @@ public class ScoreCards implements Comparable<ScoreCards> {
 	private static boolean checkBadScores(Integer[] myScore) {
 		// front
 		if (myScore[0] != ScoreCards.INCOMPLETE && myScore[1] != ScoreCards.INCOMPLETE
-				&& myScore[2] != ScoreCards.INCOMPLETE && myScore[3] != ScoreCards.INCOMPLETE
-				&& myScore[4] != ScoreCards.INCOMPLETE && myScore[5] != ScoreCards.INCOMPLETE
-				&& myScore[6] != ScoreCards.INCOMPLETE && myScore[7] != ScoreCards.INCOMPLETE
-				&& myScore[8] != ScoreCards.INCOMPLETE && myScore[9] == ScoreCards.INCOMPLETE
-				&& myScore[10] == ScoreCards.INCOMPLETE && myScore[11] == ScoreCards.INCOMPLETE
-				&& myScore[12] == ScoreCards.INCOMPLETE && myScore[13] == ScoreCards.INCOMPLETE
-				&& myScore[14] == ScoreCards.INCOMPLETE && myScore[15] == ScoreCards.INCOMPLETE
-				&& myScore[16] == ScoreCards.INCOMPLETE && myScore[17] == ScoreCards.INCOMPLETE) {
+		        && myScore[2] != ScoreCards.INCOMPLETE && myScore[3] != ScoreCards.INCOMPLETE
+		        && myScore[4] != ScoreCards.INCOMPLETE && myScore[5] != ScoreCards.INCOMPLETE
+		        && myScore[6] != ScoreCards.INCOMPLETE && myScore[7] != ScoreCards.INCOMPLETE
+		        && myScore[8] != ScoreCards.INCOMPLETE && myScore[9] == ScoreCards.INCOMPLETE
+		        && myScore[10] == ScoreCards.INCOMPLETE && myScore[11] == ScoreCards.INCOMPLETE
+		        && myScore[12] == ScoreCards.INCOMPLETE && myScore[13] == ScoreCards.INCOMPLETE
+		        && myScore[14] == ScoreCards.INCOMPLETE && myScore[15] == ScoreCards.INCOMPLETE
+		        && myScore[16] == ScoreCards.INCOMPLETE && myScore[17] == ScoreCards.INCOMPLETE) {
 			return false;
 		}
 		// back
 		else if (myScore[0] == ScoreCards.INCOMPLETE && myScore[1] == ScoreCards.INCOMPLETE
-				&& myScore[2] == ScoreCards.INCOMPLETE && myScore[3] == ScoreCards.INCOMPLETE
-				&& myScore[4] == ScoreCards.INCOMPLETE && myScore[5] == ScoreCards.INCOMPLETE
-				&& myScore[6] == ScoreCards.INCOMPLETE && myScore[7] == ScoreCards.INCOMPLETE
-				&& myScore[8] == ScoreCards.INCOMPLETE && myScore[9] != ScoreCards.INCOMPLETE
-				&& myScore[10] != ScoreCards.INCOMPLETE && myScore[11] != ScoreCards.INCOMPLETE
-				&& myScore[12] != ScoreCards.INCOMPLETE && myScore[13] != ScoreCards.INCOMPLETE
-				&& myScore[14] != ScoreCards.INCOMPLETE && myScore[15] != ScoreCards.INCOMPLETE
-				&& myScore[16] != ScoreCards.INCOMPLETE && myScore[17] != ScoreCards.INCOMPLETE) {
+		        && myScore[2] == ScoreCards.INCOMPLETE && myScore[3] == ScoreCards.INCOMPLETE
+		        && myScore[4] == ScoreCards.INCOMPLETE && myScore[5] == ScoreCards.INCOMPLETE
+		        && myScore[6] == ScoreCards.INCOMPLETE && myScore[7] == ScoreCards.INCOMPLETE
+		        && myScore[8] == ScoreCards.INCOMPLETE && myScore[9] != ScoreCards.INCOMPLETE
+		        && myScore[10] != ScoreCards.INCOMPLETE && myScore[11] != ScoreCards.INCOMPLETE
+		        && myScore[12] != ScoreCards.INCOMPLETE && myScore[13] != ScoreCards.INCOMPLETE
+		        && myScore[14] != ScoreCards.INCOMPLETE && myScore[15] != ScoreCards.INCOMPLETE
+		        && myScore[16] != ScoreCards.INCOMPLETE && myScore[17] != ScoreCards.INCOMPLETE) {
 			return false;
 		}
 		// 18
 		else if (myScore[0] != ScoreCards.INCOMPLETE && myScore[1] != ScoreCards.INCOMPLETE
-				&& myScore[2] != ScoreCards.INCOMPLETE && myScore[3] != ScoreCards.INCOMPLETE
-				&& myScore[4] != ScoreCards.INCOMPLETE && myScore[5] != ScoreCards.INCOMPLETE
-				&& myScore[6] != ScoreCards.INCOMPLETE && myScore[7] != ScoreCards.INCOMPLETE
-				&& myScore[8] != ScoreCards.INCOMPLETE && myScore[9] != ScoreCards.INCOMPLETE
-				&& myScore[10] != ScoreCards.INCOMPLETE && myScore[11] != ScoreCards.INCOMPLETE
-				&& myScore[12] != ScoreCards.INCOMPLETE && myScore[13] != ScoreCards.INCOMPLETE
-				&& myScore[14] != ScoreCards.INCOMPLETE && myScore[15] != ScoreCards.INCOMPLETE
-				&& myScore[16] != ScoreCards.INCOMPLETE && myScore[17] != ScoreCards.INCOMPLETE) {
+		        && myScore[2] != ScoreCards.INCOMPLETE && myScore[3] != ScoreCards.INCOMPLETE
+		        && myScore[4] != ScoreCards.INCOMPLETE && myScore[5] != ScoreCards.INCOMPLETE
+		        && myScore[6] != ScoreCards.INCOMPLETE && myScore[7] != ScoreCards.INCOMPLETE
+		        && myScore[8] != ScoreCards.INCOMPLETE && myScore[9] != ScoreCards.INCOMPLETE
+		        && myScore[10] != ScoreCards.INCOMPLETE && myScore[11] != ScoreCards.INCOMPLETE
+		        && myScore[12] != ScoreCards.INCOMPLETE && myScore[13] != ScoreCards.INCOMPLETE
+		        && myScore[14] != ScoreCards.INCOMPLETE && myScore[15] != ScoreCards.INCOMPLETE
+		        && myScore[16] != ScoreCards.INCOMPLETE && myScore[17] != ScoreCards.INCOMPLETE) {
 			return false;
 		}
 		return true;
@@ -229,16 +229,16 @@ public class ScoreCards implements Comparable<ScoreCards> {
 			div = 2;
 			numHoles = 9;
 			if (score.Scores[0] == ScoreCards.INCOMPLETE && score.Scores[1] == ScoreCards.INCOMPLETE
-					&& score.Scores[2] == ScoreCards.INCOMPLETE && score.Scores[3] == ScoreCards.INCOMPLETE
-					&& score.Scores[4] == ScoreCards.INCOMPLETE && score.Scores[5] == ScoreCards.INCOMPLETE
-					&& score.Scores[6] == ScoreCards.INCOMPLETE && score.Scores[7] == ScoreCards.INCOMPLETE
-					&& score.Scores[8] == ScoreCards.INCOMPLETE) {
+			        && score.Scores[2] == ScoreCards.INCOMPLETE && score.Scores[3] == ScoreCards.INCOMPLETE
+			        && score.Scores[4] == ScoreCards.INCOMPLETE && score.Scores[5] == ScoreCards.INCOMPLETE
+			        && score.Scores[6] == ScoreCards.INCOMPLETE && score.Scores[7] == ScoreCards.INCOMPLETE
+			        && score.Scores[8] == ScoreCards.INCOMPLETE) {
 				startingHole = 10; // back
 			}
 		}
 		double hpi = player.getHPIndex();
 		int hcp = HMGReport
-				.RoundIt(Calculate.calculateHandicap(golfCourse.getRating(), golfCourse.getSlope(), hpi) / div);
+		        .RoundIt(Calculate.calculateHandicap(golfCourse.getRating(), golfCourse.getSlope(), hpi) / div);
 		Hole[] arrStrokeIndex = new Hole[numHoles];
 		int startIndex = startingHole - 1;
 		for (int h = 0; h < numHoles; h++) {

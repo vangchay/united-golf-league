@@ -158,7 +158,7 @@ public class ParseWeeklyScores {
 							break;
 						default:
 							Cout.outString(
-									"ERROR: Invalid number of players in match : " + Integer.toString(numPlayers));
+							        "ERROR: Invalid number of players in match : " + Integer.toString(numPlayers));
 							break;
 						}
 						schedulerScoreCard.clear();
@@ -169,7 +169,7 @@ public class ParseWeeklyScores {
 					// Look at each individual byte
 					char[] byteBuf = comment.toCharArray();
 					if ((byteBuf[0] == '*' && byteBuf[1] == '*' && byteBuf[2] == '*' && byteBuf[3] == '*')
-							|| (byteBuf[4] == '*' && byteBuf[1] == '*' && byteBuf[2] == '*' && byteBuf[3] == '*')) {
+					        || (byteBuf[4] == '*' && byteBuf[1] == '*' && byteBuf[2] == '*' && byteBuf[3] == '*')) {
 						isComment = true;
 					}
 					// comment = comment.substring(0, 4);

@@ -38,9 +38,9 @@ import com.unitedgolfleague.HMGProperties;
 public class PlayersSpreedsheet {
 	private final static String CLASS_NAME = "PlayersSpreedsheet.";
 
-	private final static String INIT = CLASS_NAME + "Init() ";
+	private final static String INIT = CLASS_NAME + "Init().";
 
-	private final static String MAIN = CLASS_NAME + "main() ";
+	private final static String MAIN = CLASS_NAME + "main().";
 
 	private final static String PLAYERS = "players";
 
@@ -269,6 +269,12 @@ public class PlayersSpreedsheet {
 		}
 	}
 
+	/**
+	 * Get double of the string or return 0.
+	 * 
+	 * @param str
+	 * @return
+	 */
 	public static double getDouble(String str) {
 		try {
 			return Double.parseDouble(str.trim());
@@ -277,6 +283,13 @@ public class PlayersSpreedsheet {
 		return 0;
 	}
 
+	/**
+	 * Set the cell of a spreadsheet to double value.
+	 * 
+	 * @param row
+	 * @param nCell
+	 * @param Val
+	 */
 	public static void setCell(Row row, int nCell, double Val) {
 		Cell cell = row.getCell(nCell);
 		if (cell == null) {
@@ -287,6 +300,13 @@ public class PlayersSpreedsheet {
 		}
 	}
 
+	/**
+	 * Set cell to string value.
+	 * 
+	 * @param row
+	 * @param nCell
+	 * @param Val
+	 */
 	public static void setCell(Row row, int nCell, String Val) {
 		Cell cell = row.getCell(nCell);
 		if (cell == null) {
@@ -358,7 +378,7 @@ public class PlayersSpreedsheet {
 				switch (nCell) {
 				case 0: // name
 					String playerName = cell.getStringCellValue();
-					Player p = null;//todo: HMGReport.findPlayer(playerName, ListPlayers);
+					Player p = null;// todo: HMGReport.findPlayer(playerName, ListPlayers);
 					upc = new UnitedCupStandings();
 					upc.thePlayer = p;
 					ListUCS.add(upc);

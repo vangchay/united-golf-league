@@ -307,7 +307,7 @@ public class UnitedGolfLeague {
 		choicePlayer.setFont(ToolCSS.getFont());
 
 		frame.getContentPane().setLayout(new MigLayout("", "[250px][25px][129px][14px][130px][12px][200px][82px][grow]",
-				"[26px][16px][22px][6px][16px][6px][26px][500px,grow]"));
+		        "[26px][16px][22px][6px][16px][6px][26px][500px,grow]"));
 
 		btnGenerateReport = new Button("Gen Report");
 		btnGenerateReport.setFont(ToolCSS.getFont());
@@ -410,7 +410,7 @@ public class UnitedGolfLeague {
 
 		panel = new JPanel();
 		panel.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "ScoreCard", TitledBorder.LEADING,
-				TitledBorder.TOP, null, new Color(0, 0, 0)));
+		        TitledBorder.TOP, null, new Color(0, 0, 0)));
 		frame.getContentPane().add(panel, "cell 2 2 7 5,grow");
 		panel.setLayout(null);
 
@@ -422,12 +422,12 @@ public class UnitedGolfLeague {
 		table_Scores.setFont(ToolCSS.getFont());
 		panel.add(table_Scores);
 		table_Scores.setModel(new DefaultTableModel(new Object[][] {
-				{ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18" },
-				{ null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
-						null }, },
-				new String[] { "New column", "New column", "New column", "New column", "New column", "New column",
-						"New column", "New column", "New column", "New column", "New column", "New column",
-						"New column", "New column", "New column", "New column", "New column", "New column" }));
+		        { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18" },
+		        { null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
+		                null }, },
+		        new String[] { "New column", "New column", "New column", "New column", "New column", "New column",
+		                "New column", "New column", "New column", "New column", "New column", "New column",
+		                "New column", "New column", "New column", "New column", "New column", "New column" }));
 
 		lblSelectPlayer = new JLabel("Select Player");
 		lblSelectPlayer.setFont(ToolCSS.getFont());
@@ -440,7 +440,7 @@ public class UnitedGolfLeague {
 		textScoreCard = new JTextField();
 		textScoreCard.setEnabled(false);
 		textScoreCard.setToolTipText(
-				"Link to the score card file. All the files (course.csv, players.csv, and schedule.csv) should be contained in this directory.");
+		        "Link to the score card file. All the files (course.csv, players.csv, and schedule.csv) should be contained in this directory.");
 		textScoreCard.setFont(ToolCSS.getFont());
 		frame.getContentPane().add(textScoreCard, "cell 0 0 3 1,growx,aligny center");
 		textScoreCard.setColumns(10);

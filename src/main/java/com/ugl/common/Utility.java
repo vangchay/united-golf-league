@@ -113,7 +113,7 @@ public class Utility {
 	 */
 	public static String BuildFileName(String folder, String key, String fileType) {
 		String fileName = String.format("%s.%s", key, fileType);
-		fileName= FilenameUtils.concat(folder, fileName);
+		fileName = FilenameUtils.concat(folder, fileName);
 		return fileName;
 	}
 
@@ -327,7 +327,7 @@ public class Utility {
 			File file = new File(folderName);
 			if (!file.canWrite()) {
 				strVersion = String.format("%s %s %s - FileNotFoundException: Cannot write file.",
-						ProviderStrings.Errors, callerName, folderName);
+				        ProviderStrings.Errors, callerName, folderName);
 			}
 		}
 
@@ -347,7 +347,7 @@ public class Utility {
 
 			} else {
 				strVersion = String.format("%s %s %s cannot read/write", ProviderStrings.Errors, callerName,
-						folderName);
+				        folderName);
 			}
 		}
 
@@ -360,7 +360,7 @@ public class Utility {
 				FileUtils.writeStringToFile(file, "Test");
 			} catch (Exception ex) {
 				strVersion = String.format("%s %s %s File IOException %s", ProviderStrings.Errors, callerName,
-						folderName, ex.toString());
+				        folderName, ex.toString());
 			} finally {
 				FileUtils.deleteQuietly(file);
 			}
@@ -403,7 +403,7 @@ public class Utility {
 			char cFileSeparator = '/';
 			if (design.charAt(0) == cFileSeparator) {
 				String err = "File separator char (/) cannot be the first parameter in the design parameter=" + design
-						+ ".";
+				        + ".";
 				showError(STRING_CONCAT_ROOT_FOLDER, err);
 				throw new Exception(err);
 			}

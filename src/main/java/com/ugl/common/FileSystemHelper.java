@@ -70,7 +70,7 @@ public class FileSystemHelper {
 			bRet = file.delete();
 		} catch (Exception ex) {
 			String errMsg = "Failed to delete " + service + "file " + name + " in " + rootFolder + " - "
-					+ ex.toString();
+			        + ex.toString();
 			WriteTraceEntry(errMsg);
 		}
 		return bRet;

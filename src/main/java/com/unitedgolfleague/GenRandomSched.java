@@ -111,7 +111,7 @@ public class GenRandomSched {
 			groupPlayers.add(p);
 		}
 		List<Schedule> schedule = SchedUtil.generateSchedule(StartingWeek, nbrWeeks, groupPlayers,
-				PlayersSpreedsheet.ListSchedules);
+		        PlayersSpreedsheet.ListSchedules);
 		for (Schedule sh : schedule) {
 			Cout.outString(sh.toString(groupPlayers));
 		}

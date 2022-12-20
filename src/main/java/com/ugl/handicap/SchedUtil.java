@@ -22,7 +22,7 @@ public class SchedUtil {
 	 * @return
 	 */
 	public static List<Schedule> generateSchedule(int startWeek, int nbrWeeks, List<Player> players,
-			List<Schedule> listSchedules) {
+	        List<Schedule> listSchedules) {
 		List<Schedule> sch = new ArrayList<Schedule>();
 		int size = players.size();
 		if ((size % 2) == 0) {

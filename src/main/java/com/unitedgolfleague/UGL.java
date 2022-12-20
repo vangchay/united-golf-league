@@ -33,17 +33,17 @@ public class UGL {
 	private final static String CLASS_NAME = "UGL.";
 
 	private static final String STARTUP_MESSAGE = "UGL.main() - United Golf League v2.0.1 Created from Initial Version \r\n"
-			+ "Author: Chay Sayaovong\r\n" + "Date Modified: 20220423\r\n"
-			+ "The program input parameters are specified with the prefix of the '-' character.\r\n"
-			+ "And you can have more than 1 input prefix like '--input' or '-input' are the same.\r\n" + "\r\n"
-			+ "Input Parameters:\r\n" + "  1. -props <specify this to override the default properties file>\r\n"
-			+ "  2. -week <the current week in the league>\r\n" + "  3. -course <the course name>\r\n"
-			+ "  4. -tee <the course tee like white, blue, red>\r\n"
-			+ "  5. -player <the players spreadsheet file name and dir>\r\n"
-			+ "  6. -playerno <used in conjunction to mode 3 to update a player's HCP>\r\n"
-			+ "  7. -mode <mode number 1-4>\r\n" + "		MODES:\r\n" + "		1 - Calculate all HCP.\r\n"
-			+ "		2 - Calculate Match Play Results.\r\n" + "		3 - Update a player HCP.\r\n"
-			+ "		4 - Prints match play schedule.";
+	        + "Author: Chay Sayaovong\r\n" + "Date Modified: 20220423\r\n"
+	        + "The program input parameters are specified with the prefix of the '-' character.\r\n"
+	        + "And you can have more than 1 input prefix like '--input' or '-input' are the same.\r\n" + "\r\n"
+	        + "Input Parameters:\r\n" + "  1. -props <specify this to override the default properties file>\r\n"
+	        + "  2. -week <the current week in the league>\r\n" + "  3. -course <the course name>\r\n"
+	        + "  4. -tee <the course tee like white, blue, red>\r\n"
+	        + "  5. -player <the players spreadsheet file name and dir>\r\n"
+	        + "  6. -playerno <used in conjunction to mode 3 to update a player's HCP>\r\n"
+	        + "  7. -mode <mode number 1-4>\r\n" + "		MODES:\r\n" + "		1 - Calculate all HCP.\r\n"
+	        + "		2 - Calculate Match Play Results.\r\n" + "		3 - Update a player HCP.\r\n"
+	        + "		4 - Prints match play schedule.";
 
 	private static String propertiesFileName = null;
 
@@ -147,7 +147,7 @@ public class UGL {
 			 */
 			String strWeek = Integer.toString(TheWeek) + "-";
 			matchPlayReportHtmlFile = FilenameUtils.concat(report_dir,
-					"MatchPlayResult-Week-" + strWeek + yyyymmdd + ".html");
+			        "MatchPlayResult-Week-" + strWeek + yyyymmdd + ".html");
 			playersReportHtmlFile = FilenameUtils.concat(report_dir, "Players-Week-" + strWeek + yyyymmdd + ".html");
 			playerList = PlayersSpreedsheet.ListPlayers;
 			ScoresList = PlayersSpreedsheet.ListScoreCards;

@@ -26,8 +26,8 @@ public class UnitedCupStandings implements Comparable<UnitedCupStandings> {
 	public int TotalPoints = 0;
 
 	public static int Sort = 0; // 0 - normal
-								// 1 - sort by EffectiveScore
-								// 2 - sort by totol points
+	                            // 1 - sort by EffectiveScore
+	                            // 2 - sort by totol points
 
 	/**
 	 * Update the player rank...
@@ -46,7 +46,7 @@ public class UnitedCupStandings implements Comparable<UnitedCupStandings> {
 	 */
 	public String toString() {
 		String str = String.format("%s, %d, %f, %d, %d, %d, %d, %d, %d, %d", thePlayer.getName(), points, hpi, rank,
-				lastWeekRank, TourneyHCP, TourneyScore, EffectiveScore, TourneyPoints, TotalPoints);
+		        lastWeekRank, TourneyHCP, TourneyScore, EffectiveScore, TourneyPoints, TotalPoints);
 		return str;
 	}
 

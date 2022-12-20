@@ -26,7 +26,8 @@ public class Cout {
 	public static void outString(String s) {
 		if (log != null) {
 			log.info(s);
+		} else {
+			System.out.print(s + CR);
 		}
-		System.out.print(s + CR);
 	}
 }

@@ -182,7 +182,7 @@ public class HMGReport {
 	 * @return
 	 */
 	public static List<String> generateMatchReport(Course golfCourse, List<Schedule> scheduleList,
-			List<ScoreCards> Listscores, List<Player> listPlayer, int weekNo) {
+	        List<ScoreCards> Listscores, List<Player> listPlayer, int weekNo) {
 		List<String> rpt = new ArrayList<String>();
 
 		HtmlUtil.startHTML(rpt);
@@ -207,7 +207,7 @@ public class HMGReport {
 			matchNo++;
 			String msg = null;
 			msg = String.format("Processing Week %d, %d vs %d", currentSchedule.Week, currentSchedule.ID1,
-					currentSchedule.ID2);
+			        currentSchedule.ID2);
 			Cout.outString(msg);
 
 			// find the players
@@ -261,7 +261,7 @@ public class HMGReport {
 				// bHCP = true;
 			} else if (cardP1 == null || cardP2 == null) {
 				msg = String.format("Missing score card for match %d, %s vs %s", matchNo, thePlayer1.getName(),
-						thePlayer2.getName());
+				        thePlayer2.getName());
 				Cout.outString(msg);
 				continue;
 			}
@@ -305,7 +305,7 @@ public class HMGReport {
 	 * @return total points array [] for each player.
 	 */
 	private static int[] parseMatch(List<String> hmgReport, Course golfCourse, Player playerOne, Player playerTwo,
-			ScoreCards cardOne, ScoreCards cardTwo, int matchNo) {
+	        ScoreCards cardOne, ScoreCards cardTwo, int matchNo) {
 		int totalPoints[] = new int[2];
 		int strokes[][] = new int[2][18];
 
@@ -314,41 +314,41 @@ public class HMGReport {
 		HtmlUtil.tableColumnHTML(String.format("Match%d", matchNo));
 		HtmlUtil.tableColumnHTML("hpi/hp18/hp9");
 		HtmlUtil.tableColumnHTML(
-				"h1<sub>" + Integer.toString(golfCourse.getCourseInfo().get(0).getStrokeIndex()) + "</sub>");
+		        "h1<sub>" + Integer.toString(golfCourse.getCourseInfo().get(0).getStrokeIndex()) + "</sub>");
 		HtmlUtil.tableColumnHTML(
-				"h2<sub>" + Integer.toString(golfCourse.getCourseInfo().get(1).getStrokeIndex()) + "</sub>");
+		        "h2<sub>" + Integer.toString(golfCourse.getCourseInfo().get(1).getStrokeIndex()) + "</sub>");
 		HtmlUtil.tableColumnHTML(
-				"h3<sub>" + Integer.toString(golfCourse.getCourseInfo().get(2).getStrokeIndex()) + "</sub>");
+		        "h3<sub>" + Integer.toString(golfCourse.getCourseInfo().get(2).getStrokeIndex()) + "</sub>");
 		HtmlUtil.tableColumnHTML(
-				"h4<sub>" + Integer.toString(golfCourse.getCourseInfo().get(3).getStrokeIndex()) + "</sub>");
+		        "h4<sub>" + Integer.toString(golfCourse.getCourseInfo().get(3).getStrokeIndex()) + "</sub>");
 		HtmlUtil.tableColumnHTML(
-				"h5<sub>" + Integer.toString(golfCourse.getCourseInfo().get(4).getStrokeIndex()) + "</sub>");
+		        "h5<sub>" + Integer.toString(golfCourse.getCourseInfo().get(4).getStrokeIndex()) + "</sub>");
 		HtmlUtil.tableColumnHTML(
-				"h6<sub>" + Integer.toString(golfCourse.getCourseInfo().get(5).getStrokeIndex()) + "</sub>");
+		        "h6<sub>" + Integer.toString(golfCourse.getCourseInfo().get(5).getStrokeIndex()) + "</sub>");
 		HtmlUtil.tableColumnHTML(
-				"h7<sub>" + Integer.toString(golfCourse.getCourseInfo().get(6).getStrokeIndex()) + "</sub>");
+		        "h7<sub>" + Integer.toString(golfCourse.getCourseInfo().get(6).getStrokeIndex()) + "</sub>");
 		HtmlUtil.tableColumnHTML(
-				"h8<sub>" + Integer.toString(golfCourse.getCourseInfo().get(7).getStrokeIndex()) + "</sub>");
+		        "h8<sub>" + Integer.toString(golfCourse.getCourseInfo().get(7).getStrokeIndex()) + "</sub>");
 		HtmlUtil.tableColumnHTML(
-				"h9<sub>" + Integer.toString(golfCourse.getCourseInfo().get(8).getStrokeIndex()) + "</sub>");
+		        "h9<sub>" + Integer.toString(golfCourse.getCourseInfo().get(8).getStrokeIndex()) + "</sub>");
 		HtmlUtil.tableColumnHTML(
-				"h10<sub>" + Integer.toString(golfCourse.getCourseInfo().get(9).getStrokeIndex()) + "</sub>");
+		        "h10<sub>" + Integer.toString(golfCourse.getCourseInfo().get(9).getStrokeIndex()) + "</sub>");
 		HtmlUtil.tableColumnHTML(
-				"h11<sub>" + Integer.toString(golfCourse.getCourseInfo().get(10).getStrokeIndex()) + "</sub>");
+		        "h11<sub>" + Integer.toString(golfCourse.getCourseInfo().get(10).getStrokeIndex()) + "</sub>");
 		HtmlUtil.tableColumnHTML(
-				"h12<sub>" + Integer.toString(golfCourse.getCourseInfo().get(11).getStrokeIndex()) + "</sub>");
+		        "h12<sub>" + Integer.toString(golfCourse.getCourseInfo().get(11).getStrokeIndex()) + "</sub>");
 		HtmlUtil.tableColumnHTML(
-				"h13<sub>" + Integer.toString(golfCourse.getCourseInfo().get(12).getStrokeIndex()) + "</sub>");
+		        "h13<sub>" + Integer.toString(golfCourse.getCourseInfo().get(12).getStrokeIndex()) + "</sub>");
 		HtmlUtil.tableColumnHTML(
-				"h14<sub>" + Integer.toString(golfCourse.getCourseInfo().get(13).getStrokeIndex()) + "</sub>");
+		        "h14<sub>" + Integer.toString(golfCourse.getCourseInfo().get(13).getStrokeIndex()) + "</sub>");
 		HtmlUtil.tableColumnHTML(
-				"h15<sub>" + Integer.toString(golfCourse.getCourseInfo().get(14).getStrokeIndex()) + "</sub>");
+		        "h15<sub>" + Integer.toString(golfCourse.getCourseInfo().get(14).getStrokeIndex()) + "</sub>");
 		HtmlUtil.tableColumnHTML(
-				"h16<sub>" + Integer.toString(golfCourse.getCourseInfo().get(15).getStrokeIndex()) + "</sub>");
+		        "h16<sub>" + Integer.toString(golfCourse.getCourseInfo().get(15).getStrokeIndex()) + "</sub>");
 		HtmlUtil.tableColumnHTML(
-				"h17<sub>" + Integer.toString(golfCourse.getCourseInfo().get(16).getStrokeIndex()) + "</sub>");
+		        "h17<sub>" + Integer.toString(golfCourse.getCourseInfo().get(16).getStrokeIndex()) + "</sub>");
 		HtmlUtil.tableColumnHTML(
-				"h18<sub>" + Integer.toString(golfCourse.getCourseInfo().get(17).getStrokeIndex()) + "</sub>");
+		        "h18<sub>" + Integer.toString(golfCourse.getCourseInfo().get(17).getStrokeIndex()) + "</sub>");
 		HtmlUtil.tableColumnHTML("match pts");
 		HtmlUtil.tableColumnHTML("score");
 		HtmlUtil.tableColumnHTML("match hpi");
@@ -386,8 +386,8 @@ public class HMGReport {
 			playerScore2 += cardTwo.Scores[hole];
 
 			if ((cardOne.Scores[hole] == null || cardTwo.Scores[hole] == null)
-					|| (cardOne.Scores[hole] == ScoreCards.INCOMPLETE
-							&& cardTwo.Scores[hole] == ScoreCards.INCOMPLETE)) {
+			        || (cardOne.Scores[hole] == ScoreCards.INCOMPLETE
+			                && cardTwo.Scores[hole] == ScoreCards.INCOMPLETE)) {
 				arrMsgPlayer1[index1++] = ScoreCards.INC;
 				arrMsgPlayer2[index2++] = ScoreCards.INC;
 				continue;
@@ -420,17 +420,17 @@ public class HMGReport {
 				totalPts2 += 2;
 				arrMsgPlayer1[index1++] = formatScore(player1Score, player1EffScore, "");// Integer.toString(cardOne.Scores[hole]);
 				arrMsgPlayer2[index2++] = formatScore(player2Score, player2EffScore, "<sub>w</sub>");// Integer.toString(cardTwo.Scores[hole])
-																										// +
-																										// "<sub>w</sub>";
+				                                                                                     // +
+				                                                                                     // "<sub>w</sub>";
 			} else {
 				totalPts1++;
 				totalPts2++;
 				arrMsgPlayer1[index1++] = formatScore(player1Score, player1EffScore, "<sub>d</sub>");// Integer.toString(cardOne.Scores[hole])
-																										// +
-																										// "<sub>d</sub>";
+				                                                                                     // +
+				                                                                                     // "<sub>d</sub>";
 				arrMsgPlayer2[index2++] = formatScore(player2Score, player2EffScore, "<sub>d</sub>");// Integer.toString(cardTwo.Scores[hole])
-																										// +
-																										// "<sub>d</sub>";
+				                                                                                     // +
+				                                                                                     // "<sub>d</sub>";
 			}
 		}
 
@@ -531,7 +531,7 @@ public class HMGReport {
 	 * @param strokes
 	 */
 	public static void calStrokes(Player p1, Player p2, ScoreCards s1, ScoreCards s2, Course golfCourse,
-			int[][] strokes) {
+	        int[][] strokes) {
 
 		// Check for number of holes.. 9 or 18
 		int startingHole = 1;
@@ -541,19 +541,19 @@ public class HMGReport {
 			div = 2;
 			numHoles = 9;
 			if (s1.Scores[0] == ScoreCards.INCOMPLETE && s1.Scores[1] == ScoreCards.INCOMPLETE
-					&& s1.Scores[2] == ScoreCards.INCOMPLETE && s1.Scores[3] == ScoreCards.INCOMPLETE
-					&& s1.Scores[4] == ScoreCards.INCOMPLETE && s1.Scores[5] == ScoreCards.INCOMPLETE
-					&& s1.Scores[6] == ScoreCards.INCOMPLETE && s1.Scores[7] == ScoreCards.INCOMPLETE
-					&& s1.Scores[8] == ScoreCards.INCOMPLETE) {
+			        && s1.Scores[2] == ScoreCards.INCOMPLETE && s1.Scores[3] == ScoreCards.INCOMPLETE
+			        && s1.Scores[4] == ScoreCards.INCOMPLETE && s1.Scores[5] == ScoreCards.INCOMPLETE
+			        && s1.Scores[6] == ScoreCards.INCOMPLETE && s1.Scores[7] == ScoreCards.INCOMPLETE
+			        && s1.Scores[8] == ScoreCards.INCOMPLETE) {
 				startingHole = 10; // back
 			}
 		}
 
 		// figure out the handicap
 		int hcp1 = RoundIt(
-				Calculate.calculateHandicap(golfCourse.getRating(), golfCourse.getSlope(), p1.getHPIndex()) / div);
+		        Calculate.calculateHandicap(golfCourse.getRating(), golfCourse.getSlope(), p1.getHPIndex()) / div);
 		int hcp2 = RoundIt(
-				Calculate.calculateHandicap(golfCourse.getRating(), golfCourse.getSlope(), p2.getHPIndex()) / div);
+		        Calculate.calculateHandicap(golfCourse.getRating(), golfCourse.getSlope(), p2.getHPIndex()) / div);
 		int diffabs = hcp1 - hcp2;
 		if (diffabs == 0) {
 			Cout.outString("Player same handicap");

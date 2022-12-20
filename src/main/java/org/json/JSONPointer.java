@@ -201,8 +201,8 @@ public class JSONPointer {
 				current = readByIndexToken(current, token);
 			} else {
 				throw new JSONPointerException(
-						format("value [%s] is not an array or object therefore its key %s cannot be resolved", current,
-								token));
+				        format("value [%s] is not an array or object therefore its key %s cannot be resolved", current,
+				                token));
 			}
 		}
 		return current;
@@ -222,7 +222,7 @@ public class JSONPointer {
 			JSONArray currentArr = (JSONArray) current;
 			if (index >= currentArr.length()) {
 				throw new JSONPointerException(
-						format("index %d is out of bounds - the array has %d elements", index, currentArr.length()));
+				        format("index %d is out of bounds - the array has %d elements", index, currentArr.length()));
 			}
 			try {
 				return currentArr.get(index);

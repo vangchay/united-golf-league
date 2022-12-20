@@ -79,8 +79,8 @@ public class Utils {
 	 * The default end-of-line marker mode for the current system
 	 */
 	public static final Mode SYSTEM_DEFAULT = (EOL_SYSTEM_DEFAULT.equals(EOL_UNIX) ? Mode.LF
-			: (EOL_SYSTEM_DEFAULT.equals(EOL_WINDOWS) ? Mode.CRLF
-					: (EOL_SYSTEM_DEFAULT.equals(EOL_OLD_MAC) ? Mode.CR : null)));
+	        : (EOL_SYSTEM_DEFAULT.equals(EOL_WINDOWS) ? Mode.CRLF
+	                : (EOL_SYSTEM_DEFAULT.equals(EOL_OLD_MAC) ? Mode.CR : null)));
 	static {
 		// Just in case...
 		if (SYSTEM_DEFAULT == null) {
@@ -306,7 +306,7 @@ public class Utils {
 					} else {
 						// There must be a comma in the quoted string. Look for the ending quotes
 						endIndx = line.indexOf(data.charAt(0), begIndx + 1); // Plus 1 to skip the quote at the
-																				// beginning
+						                                                     // beginning
 						if (endIndx > -1) {
 							data = line.substring(begIndx + 1, endIndx); // Plus 1 to include the quote at the end
 							vRtn.add(data);
@@ -387,7 +387,7 @@ public class Utils {
 					} else {
 						// There must be a comma in the quoted string. Look for the ending quotes
 						endIndx = line.indexOf(data.charAt(0), begIndx + 1); // Plus 1 to skip the quote at the
-																				// beginning
+						                                                     // beginning
 						if (endIndx > -1) {
 							data = line.substring(begIndx + 1, endIndx); // Plus 1 to include the quote at the end
 							vRtn.add(data);

@@ -241,7 +241,7 @@ public class Player implements Comparable<Player> {
 		final int HPI_SAMPLE = HMGProperties.HPISample;
 
 		if (HMGReport.UpdatePlayerHPIMode == false
-				&& (HMGReport.CurrentWeek > 0 && HMGReport.CurrentWeek <= HPI_SAMPLE)) {
+		        && (HMGReport.CurrentWeek > 0 && HMGReport.CurrentWeek <= HPI_SAMPLE)) {
 			return;
 		}
 
@@ -261,7 +261,7 @@ public class Player implements Comparable<Player> {
 			double[] arrMean = new double[arrSize];
 			for (int i = 0; i < arrSize; i++) {
 				arrMean[i] = Calculate.calculateHandicapIndex(theCourse.getRating(), theCourse.getSlope(),
-						arrScores[i]);
+				        arrScores[i]);
 			}
 			hcpIndex = Calculate.mean(arrMean);
 			double sumOfBest = hcpIndex;
@@ -290,8 +290,9 @@ public class Player implements Comparable<Player> {
 	 */
 	public String toString() {
 		String msg = String.format(
-				"name=%s, ave=%f, email=%s, hpi=%f, hpi(init)=%f, id=%d, lastdate=%s, phone=%s, std=%f, pts=%d", playerName,
-				averageScore, playerEmail, hcpIndex, hcpIndexInitial, id, lastUpdateDate, phoneNumber, scoreStandardDeviation, playerTotalPoints);
+		        "name=%s, ave=%f, email=%s, hpi=%f, hpi(init)=%f, id=%d, lastdate=%s, phone=%s, std=%f, pts=%d",
+		        playerName, averageScore, playerEmail, hcpIndex, hcpIndexInitial, id, lastUpdateDate, phoneNumber,
+		        scoreStandardDeviation, playerTotalPoints);
 		for (Integer var : weeklyScores) {
 			if (var == null) {
 				continue;
@@ -325,10 +326,10 @@ public class Player implements Comparable<Player> {
 		// line[index++] = String.format("%.2f", HPIndexDiff);
 		// 18 hp
 		line[index++] = String.format("%d",
-				HMGReport.RoundIt(Calculate.calculateHandicap(theCourse.getRating(), theCourse.getSlope(), hcpIndex)));
+		        HMGReport.RoundIt(Calculate.calculateHandicap(theCourse.getRating(), theCourse.getSlope(), hcpIndex)));
 		// 9 hp
 		line[index++] = String.format("%d", HMGReport
-				.RoundIt(Calculate.calculateHandicap(theCourse.getRating(), theCourse.getSlope(), hcpIndex) / 2));
+		        .RoundIt(Calculate.calculateHandicap(theCourse.getRating(), theCourse.getSlope(), hcpIndex) / 2));
 		// points
 		line[index++] = Integer.toString(playerTotalPoints);
 

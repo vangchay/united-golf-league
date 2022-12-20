@@ -83,7 +83,7 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 	 * @return org.apache.axiom.om.OMElement
 	 */
 	public org.apache.axiom.om.OMElement getOMElement(final javax.xml.namespace.QName parentQName,
-			final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException {
+	        final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException {
 
 		org.apache.axiom.om.OMDataSource dataSource = new org.apache.axis2.databinding.ADBDataSource(this, parentQName);
 		return factory.createOMElement(dataSource, parentQName);
@@ -91,13 +91,13 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 	}
 
 	public void serialize(final javax.xml.namespace.QName parentQName, javax.xml.stream.XMLStreamWriter xmlWriter)
-			throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException {
+	        throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException {
 		serialize(parentQName, xmlWriter, false);
 	}
 
 	public void serialize(final javax.xml.namespace.QName parentQName, javax.xml.stream.XMLStreamWriter xmlWriter,
-			boolean serializeType)
-			throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException {
+	        boolean serializeType)
+	        throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException {
 
 		java.lang.String prefix = null;
 		java.lang.String namespace = null;
@@ -111,7 +111,7 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 			java.lang.String namespacePrefix = registerPrefix(xmlWriter, "http://www.w3.org/2005/05/xmlmime");
 			if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)) {
 				writeAttribute("xsi", "http://www.w3.org/2001/XMLSchema-instance", "type",
-						namespacePrefix + ":base64Binary", xmlWriter);
+				        namespacePrefix + ":base64Binary", xmlWriter);
 			} else {
 				writeAttribute("xsi", "http://www.w3.org/2001/XMLSchema-instance", "type", "base64Binary", xmlWriter);
 			}
@@ -125,7 +125,7 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 		if (localBase64Binary != null) {
 			try {
 				org.apache.axiom.util.stax.XMLStreamWriterUtils.writeDataHandler(xmlWriter, localBase64Binary, null,
-						true);
+				        true);
 			} catch (java.io.IOException ex) {
 				throw new javax.xml.stream.XMLStreamException("Unable to read data handler for base64Binary", ex);
 			}
@@ -148,7 +148,7 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 	 * Utility method to write an element start tag.
 	 */
 	private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
-			javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+	        javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
 		java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
 		if (writerPrefix != null) {
 			xmlWriter.writeStartElement(namespace, localPart);
@@ -169,8 +169,8 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 	 * Util method to write an attribute with the ns prefix
 	 */
 	private void writeAttribute(java.lang.String prefix, java.lang.String namespace, java.lang.String attName,
-			java.lang.String attValue, javax.xml.stream.XMLStreamWriter xmlWriter)
-			throws javax.xml.stream.XMLStreamException {
+	        java.lang.String attValue, javax.xml.stream.XMLStreamWriter xmlWriter)
+	        throws javax.xml.stream.XMLStreamException {
 		if (xmlWriter.getPrefix(namespace) == null) {
 			xmlWriter.writeNamespace(prefix, namespace);
 			xmlWriter.setPrefix(prefix, namespace);
@@ -182,7 +182,7 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 	 * Util method to write an attribute without the ns prefix
 	 */
 	private void writeAttribute(java.lang.String namespace, java.lang.String attName, java.lang.String attValue,
-			javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+	        javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
 		if (namespace.equals("")) {
 			xmlWriter.writeAttribute(attName, attValue);
 		} else {
@@ -195,8 +195,8 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 	 * Util method to write an attribute without the ns prefix
 	 */
 	private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
-			javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter)
-			throws javax.xml.stream.XMLStreamException {
+	        javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter)
+	        throws javax.xml.stream.XMLStreamException {
 
 		java.lang.String attributeNamespace = qname.getNamespaceURI();
 		java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
@@ -223,7 +223,7 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 	 */
 
 	private void writeQName(javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter)
-			throws javax.xml.stream.XMLStreamException {
+	        throws javax.xml.stream.XMLStreamException {
 		java.lang.String namespaceURI = qname.getNamespaceURI();
 		if (namespaceURI != null) {
 			java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
@@ -235,7 +235,7 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 
 			if (prefix.trim().length() > 0) {
 				xmlWriter.writeCharacters(
-						prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+				        prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
 			} else {
 				// i.e this is the default namespace
 				xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
@@ -247,7 +247,7 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 	}
 
 	private void writeQNames(javax.xml.namespace.QName[] qnames, javax.xml.stream.XMLStreamWriter xmlWriter)
-			throws javax.xml.stream.XMLStreamException {
+	        throws javax.xml.stream.XMLStreamException {
 
 		if (qnames != null) {
 			// we have to store this data until last moment since it is not possible to
@@ -272,10 +272,10 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 
 					if (prefix.trim().length() > 0) {
 						stringToWrite.append(prefix).append(":")
-								.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+						        .append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
 					} else {
 						stringToWrite
-								.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+						        .append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
 					}
 				} else {
 					stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
@@ -290,7 +290,7 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 	 * Register a namespace prefix
 	 */
 	private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace)
-			throws javax.xml.stream.XMLStreamException {
+	        throws javax.xml.stream.XMLStreamException {
 		java.lang.String prefix = xmlWriter.getPrefix(namespace);
 		if (prefix == null) {
 			prefix = generatePrefix(namespace);
@@ -313,7 +313,7 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 	 *
 	 */
 	public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
-			throws org.apache.axis2.databinding.ADBException {
+	        throws org.apache.axis2.databinding.ADBException {
 
 		java.util.ArrayList elementList = new java.util.ArrayList();
 		java.util.ArrayList attribList = new java.util.ArrayList();
@@ -327,7 +327,7 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 		attribList.add(localContentType.toString());
 
 		return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(qName, elementList.toArray(),
-				attribList.toArray());
+		        attribList.toArray());
 
 	}
 
@@ -345,7 +345,7 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 		}
 
 		public static Base64Binary fromString(javax.xml.stream.XMLStreamReader xmlStreamReader,
-				java.lang.String content) {
+		        java.lang.String content) {
 			if (content.indexOf(":") > -1) {
 				java.lang.String prefix = content.substring(0, content.indexOf(":"));
 				java.lang.String namespaceUri = xmlStreamReader.getNamespaceContext().getNamespaceURI(prefix);
@@ -378,7 +378,7 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 
 				if (reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance", "type") != null) {
 					java.lang.String fullTypeName = reader
-							.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance", "type");
+					        .getAttributeValue("http://www.w3.org/2001/XMLSchema-instance", "type");
 					if (fullTypeName != null) {
 						java.lang.String nsPrefix = null;
 						if (fullTypeName.indexOf(":") > -1) {
@@ -392,9 +392,9 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 							// find namespace for the prefix
 							java.lang.String nsUri = reader.getNamespaceContext().getNamespaceURI(nsPrefix);
 							return (Base64Binary) null/*
-														 * com.csf.documentgeneratorservice.ExtensionMapper.
-														 * getTypeObject( nsUri,type,reader)
-														 */;
+							                           * com.csf.documentgeneratorservice.ExtensionMapper.
+							                           * getTypeObject( nsUri,type,reader)
+							                           */;
 						}
 
 					}
@@ -408,13 +408,13 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 				// handle attribute "contentType"
 				java.lang.String tempAttribContentType =
 
-						reader.getAttributeValue("http://www.w3.org/2005/05/xmlmime", "contentType");
+				        reader.getAttributeValue("http://www.w3.org/2005/05/xmlmime", "contentType");
 
 				if (tempAttribContentType != null) {
 					java.lang.String content = tempAttribContentType;
 
 					object.setContentType(org.w3.www._2005._05.xmlmime.ContentType_type0.Factory.fromString(reader,
-							tempAttribContentType));
+					        tempAttribContentType));
 
 				} else {
 
@@ -427,7 +427,7 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 						if (reader.isStartElement() || reader.hasText()) {
 
 							object.setBase64Binary(
-									org.apache.axiom.util.stax.XMLStreamReaderUtils.getDataHandlerFromElement(reader));
+							        org.apache.axiom.util.stax.XMLStreamReaderUtils.getDataHandlerFromElement(reader));
 
 						} // End of if for expected property start element
 
@@ -435,7 +435,7 @@ public class Base64Binary implements org.apache.axis2.databinding.ADBBean {
 							// A start element we are not expecting indicates an invalid parameter was
 							// passed
 							throw new org.apache.axis2.databinding.ADBException(
-									"Unexpected subelement " + reader.getName());
+							        "Unexpected subelement " + reader.getName());
 						}
 
 					} else {

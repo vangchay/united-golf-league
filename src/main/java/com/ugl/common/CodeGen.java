@@ -76,7 +76,7 @@ public class CodeGen {
 	 * @return
 	 */
 	public static String parseTemplateLine(String line, List<CodeReplaceItem> replaceValues,
-			List<BaseServiceElement> elements) {
+	        List<BaseServiceElement> elements) {
 
 		String orgLine = line;
 

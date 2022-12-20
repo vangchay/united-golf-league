@@ -156,7 +156,7 @@ public class FileUtility {
 				data = org.apache.commons.codec.binary.Base64.decodeBase64(base64Data.getBytes());
 			} catch (Exception e) {
 				log.error(STRING_BASE64_BYTE_ARRAY,
-						"Exception converting base64 string to byte array - " + e.toString());
+				        "Exception converting base64 string to byte array - " + e.toString());
 			}
 		}
 		return data;
@@ -176,7 +176,7 @@ public class FileUtility {
 			data = org.apache.commons.io.IOUtils.toByteArray(in);
 		} catch (IOException ioException) {
 			log.error(STRING_BASE64_BYTE_ARRAY,
-					"IOException converting base64Binary data to byte array - " + ioException.getMessage());
+			        "IOException converting base64Binary data to byte array - " + ioException.getMessage());
 			ioException.printStackTrace();
 		}
 		return data;

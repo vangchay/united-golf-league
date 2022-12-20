@@ -91,7 +91,7 @@ public class TranUtility {
 
 		try {
 			wr = Files.newBufferedWriter(Paths.get(outputFileName), Charset.forName("UTF8"), StandardOpenOption.WRITE,
-					StandardOpenOption.APPEND, StandardOpenOption.CREATE);
+			        StandardOpenOption.APPEND, StandardOpenOption.CREATE);
 		} catch (IOException e1) {
 			e1.printStackTrace();
 			return false;

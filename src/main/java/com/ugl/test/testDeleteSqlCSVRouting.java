@@ -34,8 +34,8 @@ public class testDeleteSqlCSVRouting {
 						int Cat = Integer.parseInt(tbl[0]);
 						if (Cat == 51) {
 							String Routing = String.format(
-									"delete from IHXNG232.cfg_data WHERE CAT_ID = 51 AND CFG_KEY = '%s';",
-									tbl[1].trim());
+							        "delete from IHXNG232.cfg_data WHERE CAT_ID = 51 AND CFG_KEY = '%s';",
+							        tbl[1].trim());
 							Cout.outString(Routing);
 						}
 					} catch (Exception ex) {

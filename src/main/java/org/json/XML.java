@@ -226,7 +226,7 @@ public class XML {
 	 * @throws JSONException
 	 */
 	private static boolean parse(XMLTokener x, JSONObject context, String name, boolean keepStrings)
-			throws JSONException {
+	        throws JSONException {
 		char c;
 		int i;
 		JSONObject jsonobject = null;
@@ -412,7 +412,7 @@ public class XML {
 				// if we want full Big Number support this block can be replaced with:
 				// return stringToNumber(string);
 				if (string.indexOf('.') > -1 || string.indexOf('e') > -1 || string.indexOf('E') > -1
-						|| "-0".equals(string)) {
+				        || "-0".equals(string)) {
 					Double d = Double.valueOf(string);
 					if (!d.isInfinite() && !d.isNaN()) {
 						return d;
@@ -605,7 +605,7 @@ public class XML {
 
 		string = (object == null) ? "null" : escape(object.toString());
 		return (tagName == null) ? "\"" + string + "\""
-				: (string.length() == 0) ? "<" + tagName + "/>" : "<" + tagName + ">" + string + "</" + tagName + ">";
+		        : (string.length() == 0) ? "<" + tagName + "/>" : "<" + tagName + ">" + string + "</" + tagName + ">";
 
 	}
 }

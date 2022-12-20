@@ -37,8 +37,8 @@ public class UpdatePeggyDDTSheet {
 	private static String yyyymmdd = new SimpleDateFormat("MM-dd-yyyy").format(todaytm);
 
 	private static String[] START_UP = { "UpdatePeggyDDTSheet v1.0.0 - Updates PEGGY'S CSV based on 3 input parameters",
-			"Args1> Peggy's spreadsheet *.xlsx", "Args2> CW tool intraday CSV file",
-			"Args3> CW tool nonIntraday CSV file" };
+	        "Args1> Peggy's spreadsheet *.xlsx", "Args2> CW tool intraday CSV file",
+	        "Args3> CW tool nonIntraday CSV file" };
 
 	public static void main(String[] args) {
 		for (String line : START_UP) {

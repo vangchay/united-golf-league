@@ -62,7 +62,7 @@ public class Course implements Comparable<Course> {
 	 */
 	public String toString() {
 		String msg = String.format("[%s-%s holes=%d rating=%f slope=%f par=%f front=%f back=%f]\n", Name, Tee, numHoles,
-				Rating, Slope, Par, Front, Back);
+		        Rating, Slope, Par, Front, Back);
 		String msgHoles = "";
 		for (Hole var : courseInfo) {
 			msgHoles = msgHoles + ", " + var.toString();
@@ -276,7 +276,7 @@ public class Course implements Comparable<Course> {
 							String strokeindex = rec.get(index++);
 							String yards = rec.get(index++);
 							Hole h = new Hole(Integer.parseInt(hole), Integer.parseInt(par), Integer.parseInt(yards),
-									Integer.parseInt(strokeindex));
+							        Integer.parseInt(strokeindex));
 							currentCourse.getCourseInfo().add(h);
 						} catch (Exception ex) {
 							Cout.outString(ex.toString());
