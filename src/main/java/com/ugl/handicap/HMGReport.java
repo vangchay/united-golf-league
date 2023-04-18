@@ -364,13 +364,13 @@ public class HMGReport {
 		// hp index
 		double hpi = playerOne.getHPIndex();
 		// 18 hole hp
-		int hp = RoundIt(Calculate.calculateHandicap(golfCourse.getRating(), golfCourse.getSlope(), hpi));
+		int hp = RoundIt(HcpUtils.calculateHandicap(golfCourse.getRating(), golfCourse.getSlope(), hpi));
 		// 9 hole hp
-		int hp9 = RoundIt(Calculate.calculateHandicap(golfCourse.getRating(), golfCourse.getSlope(), hpi) / 2);
+		int hp9 = RoundIt(HcpUtils.calculateHandicap(golfCourse.getRating(), golfCourse.getSlope(), hpi) / 2);
 		arrMsgPlayer1[index1++] = String.format("%.1f/ %d/ %d", playerOne.getHPIndex(), hp, hp9);
 		hpi = playerTwo.getHPIndex();
-		hp = RoundIt(Calculate.calculateHandicap(golfCourse.getRating(), golfCourse.getSlope(), hpi));
-		hp9 = RoundIt(Calculate.calculateHandicap(golfCourse.getRating(), golfCourse.getSlope(), hpi) / 2);
+		hp = RoundIt(HcpUtils.calculateHandicap(golfCourse.getRating(), golfCourse.getSlope(), hpi));
+		hp9 = RoundIt(HcpUtils.calculateHandicap(golfCourse.getRating(), golfCourse.getSlope(), hpi) / 2);
 		arrMsgPlayer2[index2++] = String.format("%.1f/ %d/ %d", playerTwo.getHPIndex(), hp, hp9);
 
 		calStrokes(playerOne, playerTwo, cardOne, cardTwo, golfCourse, strokes);
@@ -438,11 +438,11 @@ public class HMGReport {
 		double hpi2 = 0;
 
 		if (nineHoles == true) {
-			hpi1 = Calculate.calculateHandicapIndex(golfCourse.getRating(), golfCourse.getSlope(), playerScore1 * 2);
-			hpi2 = Calculate.calculateHandicapIndex(golfCourse.getRating(), golfCourse.getSlope(), playerScore2 * 2);
+			hpi1 = HcpUtils.calculateHandicapIndex(golfCourse.getRating(), golfCourse.getSlope(), playerScore1 * 2);
+			hpi2 = HcpUtils.calculateHandicapIndex(golfCourse.getRating(), golfCourse.getSlope(), playerScore2 * 2);
 		} else {
-			hpi1 = Calculate.calculateHandicapIndex(golfCourse.getRating(), golfCourse.getSlope(), playerScore1);
-			hpi2 = Calculate.calculateHandicapIndex(golfCourse.getRating(), golfCourse.getSlope(), playerScore2);
+			hpi1 = HcpUtils.calculateHandicapIndex(golfCourse.getRating(), golfCourse.getSlope(), playerScore1);
+			hpi2 = HcpUtils.calculateHandicapIndex(golfCourse.getRating(), golfCourse.getSlope(), playerScore2);
 		}
 
 		int hpPts1 = 0;
@@ -551,9 +551,9 @@ public class HMGReport {
 
 		// figure out the handicap
 		int hcp1 = RoundIt(
-		        Calculate.calculateHandicap(golfCourse.getRating(), golfCourse.getSlope(), p1.getHPIndex()) / div);
+		        HcpUtils.calculateHandicap(golfCourse.getRating(), golfCourse.getSlope(), p1.getHPIndex()) / div);
 		int hcp2 = RoundIt(
-		        Calculate.calculateHandicap(golfCourse.getRating(), golfCourse.getSlope(), p2.getHPIndex()) / div);
+		        HcpUtils.calculateHandicap(golfCourse.getRating(), golfCourse.getSlope(), p2.getHPIndex()) / div);
 		int diffabs = hcp1 - hcp2;
 		if (diffabs == 0) {
 			Cout.outString("Player same handicap");

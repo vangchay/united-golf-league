@@ -233,9 +233,9 @@ public class Player implements Comparable<Player> {
 		Arrays.sort(arrScores);
 
 		// Calculate averages...
-		averageScore = Calculate.mean(arrScores);
-		double aveHpi = Calculate.calculateHandicapIndex(theCourse.getRating(), theCourse.getSlope(), averageScore);
-		scoreStandardDeviation = Calculate.standardDeviation(arrScores);
+		averageScore = HcpUtils.mean(arrScores);
+		double aveHpi = HcpUtils.calculateHandicapIndex(theCourse.getRating(), theCourse.getSlope(), averageScore);
+		scoreStandardDeviation = HcpUtils.standardDeviation(arrScores);
 
 		// Calculate the handicaps...
 		final int HPI_SAMPLE = HMGProperties.HPISample;
@@ -248,9 +248,9 @@ public class Player implements Comparable<Player> {
 		// if we don't have enough scores, just calculate what we have...
 		if (calculatedGoodScores <= HPI_SAMPLE && HMGReport.CurrentWeek <= HPI_SAMPLE) {
 			for (int i = 0; i < calculatedGoodScores; i++) {
-				arrHPI[i] = Calculate.calculateHandicapIndex(theCourse.getRating(), theCourse.getSlope(), arrScores[i]);
+				arrHPI[i] = HcpUtils.calculateHandicapIndex(theCourse.getRating(), theCourse.getSlope(), arrScores[i]);
 			}
-			hcpIndex = Calculate.mean(arrHPI);
+			hcpIndex = HcpUtils.mean(arrHPI);
 		}
 		// only take the necessary samples...
 		else {
@@ -260,10 +260,10 @@ public class Player implements Comparable<Player> {
 			}
 			double[] arrMean = new double[arrSize];
 			for (int i = 0; i < arrSize; i++) {
-				arrMean[i] = Calculate.calculateHandicapIndex(theCourse.getRating(), theCourse.getSlope(),
+				arrMean[i] = HcpUtils.calculateHandicapIndex(theCourse.getRating(), theCourse.getSlope(),
 				        arrScores[i]);
 			}
-			hcpIndex = Calculate.mean(arrMean);
+			hcpIndex = HcpUtils.mean(arrMean);
 			double sumOfBest = hcpIndex;
 			// Use your AVE HPI score in the calculation... so two PPL will never get the
 			// same score...
@@ -326,10 +326,10 @@ public class Player implements Comparable<Player> {
 		// line[index++] = String.format("%.2f", HPIndexDiff);
 		// 18 hp
 		line[index++] = String.format("%d",
-		        HMGReport.RoundIt(Calculate.calculateHandicap(theCourse.getRating(), theCourse.getSlope(), hcpIndex)));
+		        HMGReport.RoundIt(HcpUtils.calculateHandicap(theCourse.getRating(), theCourse.getSlope(), hcpIndex)));
 		// 9 hp
 		line[index++] = String.format("%d", HMGReport
-		        .RoundIt(Calculate.calculateHandicap(theCourse.getRating(), theCourse.getSlope(), hcpIndex) / 2));
+		        .RoundIt(HcpUtils.calculateHandicap(theCourse.getRating(), theCourse.getSlope(), hcpIndex) / 2));
 		// points
 		line[index++] = Integer.toString(playerTotalPoints);
 

@@ -238,7 +238,7 @@ public class ScoreCards implements Comparable<ScoreCards> {
 		}
 		double hpi = player.getHPIndex();
 		int hcp = HMGReport
-		        .RoundIt(Calculate.calculateHandicap(golfCourse.getRating(), golfCourse.getSlope(), hpi) / div);
+		        .RoundIt(HcpUtils.calculateHandicap(golfCourse.getRating(), golfCourse.getSlope(), hpi) / div);
 		Hole[] arrStrokeIndex = new Hole[numHoles];
 		int startIndex = startingHole - 1;
 		for (int h = 0; h < numHoles; h++) {

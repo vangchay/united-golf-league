@@ -2,9 +2,9 @@ package com.ugl.handicap;
 
 import java.util.Arrays;
 
-public class Calculate {
+public class HcpUtils {
 
-	public Calculate() {
+	public HcpUtils() {
 
 	}
 
@@ -87,6 +87,14 @@ public class Calculate {
 	public static double calculateHandicap(double rating, double slope, double handicapIndex) {
 		double handicap = (handicapIndex * slope) / 113;
 		return handicap;
+	}
+
+	public static double roundValue(double val) {
+		double val2 = val * 100;
+		val2 = Math.round(val2);
+		val2 /= 100;
+		return val2;
+		// return (Math.round(val * 100)) / 100;
 	}
 
 }
