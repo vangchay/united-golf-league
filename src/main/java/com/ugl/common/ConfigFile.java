@@ -10,93 +10,93 @@ import java.io.File;
  *
  */
 public class ConfigFile {
-	private final static String CLASS_NAME = "configFile.";
+    private final static String CLASS_NAME = "configFile.";
 
-	private final static String SHOW = CLASS_NAME + "Show()";
+    private final static String SHOW = CLASS_NAME + "Show()";
 
-	private final static String USS_PATH = "USSPath";
+    private final static String USS_PATH = "USSPath";
 
-	private final static String NOTES = "Notes";
+    private final static String NOTES = "Notes";
 
-	private final static String COPY_FROM = "CopyFrom";
+    private final static String COPY_FROM = "CopyFrom";
 
-	private final static String ENVIRONMENT = "Environment";
+    private final static String ENVIRONMENT = "Environment";
 
-	private final static String SOURCE = "Source";
+    private final static String SOURCE = "Source";
 
-	private final static String DOC_PATH_NAME = "DocPathName";
+    private final static String DOC_PATH_NAME = "DocPathName";
 
-	private final static String INPUT_FILE = "InputFile";
+    private final static String INPUT_FILE = "InputFile";
 
-	private final static String INPUT_FILE_BINARY = "InputFileBinary";
+    private final static String INPUT_FILE_BINARY = "InputFileBinary";
 
-	private final static String GOLD_FOLDER = "GoldFolder";
+    private final static String GOLD_FOLDER = "GoldFolder";
 
-	private final static String JOB_RUN_TIMEOUT = "JobRunTimeout";
+    private final static String JOB_RUN_TIMEOUT = "JobRunTimeout";
 
-	private final static String DEFAULT_VALUE = "./";
+    private final static String DEFAULT_VALUE = "./";
 
-	/**
-	 * USS Path.
-	 */
-	private String ussPath;
+    /**
+     * USS Path.
+     */
+    private String ussPath;
 
-	/**
-	 * Notes.
-	 */
-	private String notes;
+    /**
+     * Notes.
+     */
+    private String notes;
 
-	/**
-	 * Copy From.
-	 */
-	private String copyFrom;
+    /**
+     * Copy From.
+     */
+    private String copyFrom;
 
-	/**
-	 * Environment.
-	 */
-	private String environment;
+    /**
+     * Environment.
+     */
+    private String environment;
 
-	/**
-	 * source.
-	 */
-	private String source;
+    /**
+     * source.
+     */
+    private String source;
 
-	/**
-	 * Document path name.
-	 */
-	private String documentPathName;
+    /**
+     * Document path name.
+     */
+    private String documentPathName;
 
-	/**
-	 * Input file.
-	 */
-	private String inputFile;
+    /**
+     * Input file.
+     */
+    private String inputFile;
 
-	/**
-	 * Binary input file.
-	 */
-	private String binaryInputFile;
+    /**
+     * Binary input file.
+     */
+    private String binaryInputFile;
 
-	/**
-	 * Gold folder.
-	 */
-	private String goldFolder;
+    /**
+     * Gold folder.
+     */
+    private String goldFolder;
 
-	/**
-	 * Job run timeout.
-	 */
-	private int jobRunTimeoutSecs = 0;
+    /**
+     * Job run timeout.
+     */
+    private int jobRunTimeoutSecs = 0;
 
-	/**
-	 * File.
-	 */
-	private String fileName;
+    /**
+     * File.
+     */
+    private String fileName;
 
-	/**
-	 * Constructor.
-	 * 
-	 * @param batchFileName
-	 */
-	public ConfigFile(File myConfigFile) {
+    /**
+     * Constructor.
+     * 
+     * @param batchFileName
+     */
+    public ConfigFile(File myConfigFile) {
 //		fileName = myConfigFile.getAbsolutePath();
 //		@SuppressWarnings("unused")
 //		ConfigFileHelper config = new ConfigFileHelper();
@@ -147,64 +147,64 @@ public class ConfigFile {
 //			jobRunTimeoutSecs = Integer.parseInt(timeout);
 //		} catch (Exception e) {
 //		}
-	}
+    }
 
-	public void Show() {
-		Cout.outString("File " + fileName);
-		Cout.outString(USS_PATH + "=" + ussPath);
-		Cout.outString(NOTES + "=" + notes);
-		Cout.outString(COPY_FROM + "=" + copyFrom);
-		Cout.outString(ENVIRONMENT + "=" + environment);
-		Cout.outString(SOURCE + "=" + source);
-		Cout.outString(DOC_PATH_NAME + "=" + documentPathName);
-		Cout.outString(INPUT_FILE + "=" + inputFile);
-		Cout.outString(INPUT_FILE_BINARY + "=" + binaryInputFile);
-		Cout.outString(GOLD_FOLDER + "=" + goldFolder);
-		Cout.outString(JOB_RUN_TIMEOUT + "=" + Integer.toString(jobRunTimeoutSecs));
-	}
+    public void Show() {
+	Cout.outString("File " + fileName);
+	Cout.outString(USS_PATH + "=" + ussPath);
+	Cout.outString(NOTES + "=" + notes);
+	Cout.outString(COPY_FROM + "=" + copyFrom);
+	Cout.outString(ENVIRONMENT + "=" + environment);
+	Cout.outString(SOURCE + "=" + source);
+	Cout.outString(DOC_PATH_NAME + "=" + documentPathName);
+	Cout.outString(INPUT_FILE + "=" + inputFile);
+	Cout.outString(INPUT_FILE_BINARY + "=" + binaryInputFile);
+	Cout.outString(GOLD_FOLDER + "=" + goldFolder);
+	Cout.outString(JOB_RUN_TIMEOUT + "=" + Integer.toString(jobRunTimeoutSecs));
+    }
 
-	public String getUssPath() {
-		return ussPath;
-	}
+    public String getUssPath() {
+	return ussPath;
+    }
 
-	public String getNotes() {
-		return notes;
-	}
+    public String getNotes() {
+	return notes;
+    }
 
-	public String getCopyFrom() {
-		return copyFrom;
-	}
+    public String getCopyFrom() {
+	return copyFrom;
+    }
 
-	public String getEnvironment() {
-		return environment;
-	}
+    public String getEnvironment() {
+	return environment;
+    }
 
-	public String getSource() {
-		return source;
-	}
+    public String getSource() {
+	return source;
+    }
 
-	public String getDocumentPathName() {
-		return documentPathName;
-	}
+    public String getDocumentPathName() {
+	return documentPathName;
+    }
 
-	public String getInputFile() {
-		return inputFile;
-	}
+    public String getInputFile() {
+	return inputFile;
+    }
 
-	public String getBinaryInputFile() {
-		return binaryInputFile;
-	}
+    public String getBinaryInputFile() {
+	return binaryInputFile;
+    }
 
-	public String getGoldFolder() {
-		return goldFolder;
-	}
+    public String getGoldFolder() {
+	return goldFolder;
+    }
 
-	public int getJobRunTimeoutSecs() {
-		return jobRunTimeoutSecs;
-	}
+    public int getJobRunTimeoutSecs() {
+	return jobRunTimeoutSecs;
+    }
 
-	public String getFileName() {
-		return fileName;
-	}
+    public String getFileName() {
+	return fileName;
+    }
 
 }

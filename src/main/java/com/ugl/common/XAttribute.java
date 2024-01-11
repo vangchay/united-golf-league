@@ -8,25 +8,25 @@ package com.ugl.common;
  *
  */
 public class XAttribute {
-	/**
-	 * The attribute name.
-	 */
-	public String attrName = "";
-	/**
-	 * The attribute setting.
-	 */
-	public String attrSetting = "";
+    /**
+     * The attribute name.
+     */
+    public String attrName = "";
+    /**
+     * The attribute setting.
+     */
+    public String attrSetting = "";
 
-	/**
-	 * Set the attribute and setting.
-	 * 
-	 * @param name    - Attribute name.
-	 * @param setting - Attribute setting.
-	 */
-	public XAttribute(String name, String setting) {
-		attrName = name;
-		attrSetting = setting;
-	}
+    /**
+     * Set the attribute and setting.
+     * 
+     * @param name    - Attribute name.
+     * @param setting - Attribute setting.
+     */
+    public XAttribute(String name, String setting) {
+	attrName = name;
+	attrSetting = setting;
+    }
 }
 
 /**

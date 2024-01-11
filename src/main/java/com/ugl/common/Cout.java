@@ -8,26 +8,26 @@ import org.apache.logging.log4j.Logger;
  *
  */
 public class Cout {
-	static protected Logger log = LogManager.getLogger(Cout.class);
+    static protected Logger log = LogManager.getLogger(Cout.class);
 
-	private final static String CR = "\n";
+    private final static String CR = "\n";
 
-	/**
-	 * 
-	 */
-	public Cout() {
+    /**
+     * 
+     */
+    public Cout() {
+    }
+
+    /**
+     * Print standard out
+     * 
+     * @param s
+     */
+    public static void outString(String s) {
+	if (log != null) {
+	    log.info(s);
+	} else {
+	    System.out.print(s + CR);
 	}
-
-	/**
-	 * Print standard out
-	 * 
-	 * @param s
-	 */
-	public static void outString(String s) {
-		if (log != null) {
-			log.info(s);
-		} else {
-			System.out.print(s + CR);
-		}
-	}
+    }
 }

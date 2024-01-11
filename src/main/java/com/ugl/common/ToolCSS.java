@@ -7,24 +7,24 @@ import java.awt.Font;
  *
  */
 public class ToolCSS {
-	public static final String VERSION = "3.02_20161130";
+    public static final String VERSION = "3.02_20161130";
 
-	/**
-	 * 
-	 */
-	public ToolCSS() {
-		// TODO Auto-generated constructor stub
-	}
+    /**
+     * 
+     */
+    public ToolCSS() {
+	// TODO Auto-generated constructor stub
+    }
 
-	public static Font getTitleFont() {
-		return new Font("Tahoma", Font.BOLD, 14);
-	}
+    public static Font getTitleFont() {
+	return new Font("Tahoma", Font.BOLD, 14);
+    }
 
-	public static Font getFont() {
-		return new Font("Tahoma", Font.PLAIN, 14);
-	}
+    public static Font getFont() {
+	return new Font("Tahoma", Font.PLAIN, 14);
+    }
 
-	public static Font getDebugFont() {
-		return new Font("Courier New", Font.PLAIN, 16);
-	}
+    public static Font getDebugFont() {
+	return new Font("Courier New", Font.PLAIN, 16);
+    }
 }

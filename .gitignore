@@ -6,3 +6,5 @@ node_modules
 .vscode
 .flattened-pom.xml
 /target/
+**/doc/**
+/doc/
